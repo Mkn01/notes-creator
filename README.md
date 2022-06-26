@@ -6,7 +6,6 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Video demo](#video-demo)
 - [Deployment](#deployment)
 
 ## Description
@@ -43,10 +42,8 @@ npm run start
 
 MIT License
 
-## Video demo
-
-View a Demo of the application [here](https://drive.google.com/file/d/1AoM2bt5BxP89XPgT1wqZGW_MG9_qDTod/view)
-
 ## Deployment
 
 Visit GitHub repository [here](https://github.com/Mkn01/notes-creator/tree/dev)
+
+Visit Deployed app on heroku [here](https://git.heroku.com/calm-sierra-90971.git)
