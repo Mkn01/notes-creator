@@ -1,27 +1,19 @@
-//import express
+//import dependencies
 const express = require("express");
-
+const path = require("path");
 const routes = require("./routes");
 
 //create my express app instance
 const app = express();
 
 // declare the PORT
-const PORT = 8000;
-
-//register GET method
-
-app.get("/homepage", (req, res) => {
-  // return response
-  return res.sendFile();
-});
+const PORT = 4000;
 
 //middleware
-app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static("public"));
-app.use("/", htmlRoutes);
-app.use("/api", apiRoutes);
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "../public")));
+app.use(routes);
 
 app.listen(PORT, () => {
   console.log(`server running on http://localhost:${PORT}`);

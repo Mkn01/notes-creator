@@ -1,10 +1,11 @@
 const { Router } = require("express");
 
-const { getNote, createNote } = require("../controllers/notes");
+const { getNote, createNotes, getNotes } = require("../controllers/notes");
 
 const router = Router();
 
-router.get("/", getNote);
-router.post("/", createNote);
+router.get("/", getNotes);
+router.get("/:noteId", getNote);
+router.post("/", createNotes);
 
 module.exports = router;
