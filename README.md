@@ -46,4 +46,4 @@ MIT License
 
 Visit GitHub repository [here](https://github.com/Mkn01/notes-creator/tree/dev)
 
-Visit Deployed app on heroku [here](https://git.heroku.com/calm-sierra-90971.git)
+Visit Deployed app on heroku [here](https://notes-creator.herokuapp.com/)
