@@ -10,7 +10,7 @@ const renderLandingPage = (req, res) => {
 
 const renderNotesPage = (req, res) => {
   // get file path
-  const filePath = path.join(__dirname, "../../public/notes.js");
+  const filePath = path.join(__dirname, "../../public/notes.html");
 
   // send file
   return res.sendFile(filePath);

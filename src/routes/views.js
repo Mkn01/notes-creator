@@ -1,20 +1,9 @@
-const path = require("path");
+const { Router } = require("express");
+const { renderLandingPage, renderNotesPage } = require("../controllers/views");
 
-renderLandingPage = (req, res) => {
-  //get file path
-  const filePath = path.join(__dirname, "../../public/index.html");
-  // send file
-  return res.sendFile(filePath);
-};
+const router = Router();
 
-renderNotesPage = (req, res) => {
-  //get file path
-  const filePath = path.join(__dirname, "../../public/notes.html");
-  //send file
-  return res.sendFile(filePath);
-};
+router.get("/notes", renderNotesPage);
+router.get("/", renderLandingPage);
 
-module.exports = {
-  renderLandingPage,
-  renderNotesPage,
-};
+module.exports = router;
