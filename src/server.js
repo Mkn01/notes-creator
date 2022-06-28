@@ -2,12 +2,13 @@
 const express = require("express");
 const path = require("path");
 const routes = require("./routes");
+require("dotenv").config();
 
 //create my express app instance
 const app = express();
-
+console.log(process.env.PORT);
 // declare the PORT
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 2000;
 
 //middleware
 app.use(express.json());
