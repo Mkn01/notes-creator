@@ -1,0 +1,21 @@
+//import dependencies
+const express = require("express");
+const path = require("path");
+const routes = require("./routes");
+require("dotenv").config();
+
+//create my express app instance
+const app = express();
+console.log(process.env.PORT);
+// declare the PORT
+const PORT = process.env.PORT || 2000;
+
+//middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "../public")));
+app.use("/", routes);
+
+app.listen(PORT, () => {
+  console.log(`server running on http://localhost:${PORT}`);
+});
